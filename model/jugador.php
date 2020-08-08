@@ -3,6 +3,7 @@ class Jugador
 {
 	private $pdo;
 	
+	public $id_jugador;
     public $username;
 	public $clave;
 	public $tiempo;
@@ -36,6 +37,24 @@ class Jugador
 			die($e->getMessage());
 		}
 	}
+	
+	public function Jugador()
+	{
+		try
+		{
+			$result = array();
+
+			$stm = $this->pdo->prepare("SELECT username FROM jugadores ORDER BY id_jugador DESC LIMIT 1");
+			$stm->execute();
+
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		}
+		catch(Exception $e)
+		{
+			die($e->getMessage());
+		}
+	}
+
 
 	public function Registrar(Jugador $data)
 	{

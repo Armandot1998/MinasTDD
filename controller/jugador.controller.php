@@ -27,13 +27,7 @@ class JugadorController{
         require_once 'view/footer.php';
     }
 
-    public function Jugar(){
-        $alm = new Jugador();
-        
-        if(isset($_REQUEST['id_jugador'])){
-            $alm = $this->model->Obtener($_REQUEST['id_jugador']);
-        }
-        
+    public function Jugar(){ 
         require_once 'view/header.php';
         require_once 'view/juego/buscaminas.php';
         require_once 'view/footer.php';

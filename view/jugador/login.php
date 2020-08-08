@@ -1,10 +1,10 @@
 <h1 class="page-header">
-    <?php echo $alm->id != null ? $alm->Nombre : 'Nuevo Jugador'; ?>
+    <?php echo $alm->id != null ? $alm->Nombre : 'Bienvenido Jugador'; ?>
 </h1>
 
 <ol class="breadcrumb">
-  <li><a href="?c=Jugador">Jugador</a></li>
-  <li class="active"><?php echo $alm->id_jugador != null ? $alm->Nombre : 'Como te llamas?'; ?></li>
+  <li><a>Jugador</a></li>
+  <li class="active"><?php echo $alm->id_jugador != null ? $alm->Nombre : 'Registro del nickname'; ?></li>
 </ol>
 
 <form id="frm-jugador" action="?c=Jugador&a=Guardar" method="post" enctype="multipart/form-data">
