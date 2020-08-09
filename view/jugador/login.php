@@ -15,7 +15,7 @@
         <input type="text" name="username" value="<?php echo $alm->username; ?>" class="form-control" placeholder="Ingrese su nickname" data-validacion-tipo="requerido|min:3" />
     </div> 
     <div class="text-right">
-        <button class="btn btn-success">Comenzar</button>
+        <button class="btn btn-success">Nueva Partida</button>
     </div>
 </form>
 

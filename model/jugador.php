@@ -26,7 +26,7 @@ class Jugador
 		{
 			$result = array();
 
-			$stm = $this->pdo->prepare("SELECT jugadores.username AS username, historial.puntuacion AS puntuacion, historial.tiempo AS tiempo
+			$stm = $this->pdo->prepare("SELECT jugadores.username AS username, historial.puntuacion AS puntuacion, historial.npartidas AS npartidas
 			 FROM jugadores INNER JOIN historial ON historial.id_jugador = jugadores.id_jugador");
 			$stm->execute();
 
@@ -66,7 +66,7 @@ class Jugador
 		$this->pdo->prepare($sql)
 		     ->execute(
 				array(
-                    $data->username
+					$data->username
                 )
 			);
 		} catch (Exception $e) 

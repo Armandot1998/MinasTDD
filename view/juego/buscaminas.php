@@ -13,8 +13,15 @@
 	<div class="row">
 		<div class="col-md-12" align="center">
         <div id="tablero"></div>
-	    <div id="estado"><div>Nº de minas restante: <span id="numMinasRestantes"></sapn></div></div>
+        <div id="estado"><div>Nº de minas restante: <span id="numMinasRestantes"></sapn></div></div>
 		</div>
 	</div>
 </div>
+<form action="./controller/score.php" method="post" >
+    <div class="text-right">
+        <button class="btn btn-success">Nueva Partida</button>
+        <a class="btn btn-default" href="http://localhost/MinasTDD/">Salir</a>
+    </div>
+</form>
+
 

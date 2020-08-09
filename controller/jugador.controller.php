@@ -45,9 +45,17 @@ class JugadorController{
         
         header('Location: ?c=Jugador&a=Jugar');
     }
+
+    public function Score(){
+        $alm = new Jugador();
     
-    public function Eliminar(){
-        $this->model->Eliminar($_REQUEST['id_jugador']);
-        header('Location: index.php');
+        $alm->username = $_REQUEST['username'];
+        $alm->clave = $_REQUEST['clave'];
+
+        $alm->id > 0 
+            ? $this->model->Actualizar($alm)
+            : $this->model->Puntuacion($alm);
+        
+        header('Location: ?c=Jugador&a=Jugar');
     }
 }
